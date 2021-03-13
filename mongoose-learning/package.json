@@ -1,5 +1,5 @@
 {
-  "name": "BackEndLearning",
+  "name": "mongoose-learning",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/suman-saket/Back-End-Learning#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.12.0"
   }
 }
