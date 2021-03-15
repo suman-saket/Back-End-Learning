@@ -9,8 +9,17 @@ const playlistSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
+    unique: trye,
+    lowercase: true,
+    trim: true,
+    minlength: [2, "minimum 2 letters"],
+    maxlength: 30,
   },
-  ctype: String,
+  ctype: {
+    type: String,
+    required: true,
+    enum: ["frontend", "backend", "database"],
+  },
   vidoes: Number,
   author: String,
   active: Boolean,
