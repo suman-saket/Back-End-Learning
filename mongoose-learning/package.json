@@ -19,6 +19,7 @@
   "homepage": "https://github.com/suman-saket/Back-End-Learning#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.12.0"
+    "mongoose": "^5.12.0",
+    "validator": "^13.5.2"
   }
 }

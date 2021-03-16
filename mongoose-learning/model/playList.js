@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const validator = require("validator");
 
 //Schema
 //A mpngoose model is a wrapper on the Mongoose Schema.
@@ -9,7 +10,7 @@ const playlistSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    unique: trye,
+    unique: true,
     lowercase: true,
     trim: true,
     minlength: [2, "minimum 2 letters"],
@@ -20,8 +21,25 @@ const playlistSchema = new mongoose.Schema({
     required: true,
     enum: ["frontend", "backend", "database"],
   },
-  vidoes: Number,
+  vidoes: {
+    type: Number,
+    validate(value) {
+      if (value < 0) {
+        throw new Error("Vidoes count can't be negative");
+      }
+    },
+  },
   author: String,
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    validate(value) {
+      if (!validator.isEmail(value)) {
+        throw new Error("Email is invalid");
+      }
+    },
+  },
   active: Boolean,
   date: {
     type: Date,

@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-//const create = require("./routes/create-and-Insert");
-const find = require("./routes/findDocument");
+const create = require("./routes/create-and-Insert");
+//const find = require("./routes/findDocument");
 
 //local Databse connection
 mongoose
@@ -14,8 +14,8 @@ mongoose
   .catch((err) => console.log(err));
 
 //routes running
-//app.use("/", create);
-app.use("/", find);
+app.use("/", create);
+//app.use("/", find);
 
 //local port running
 app.listen(8000, () => {
