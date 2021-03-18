@@ -99,6 +99,7 @@ app.patch("/students/:id", async (req, res) => {
     res.status(404).send(err);
   }
 });
+
 //Route to post data in our databse using promise syntax
 app.post("/students", (req, res) => {
   console.log(req.body);
