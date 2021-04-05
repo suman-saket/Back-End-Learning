@@ -196,7 +196,7 @@
 // the difference lies in the fact that callback functions are called when an asynchronous function returns its result,
 // whereas event handling works on the observer pattern.The functions that listen to events act as Observers.Whenever an event gets fired,
 // its listener function starts executing.Node.js has multiple in -built events available through events module and EventEmitter class
-// which are used to bind events and event - listeners as follows
+// which are used to bind events and event - listeners as follows.
 
 //-----------------------------------------------------------------------------------------------------------------------
 
@@ -216,7 +216,6 @@
 // 30
 // > 10 + ( 20 * 30 ) - 40
 // 570
-// >
 
 //-----------------------------------------------------------------------------------------------------------------------
 // Q. What is the difference between Asynchronous and Non-blocking?
