@@ -280,7 +280,50 @@
 // Due to this reason, even the developers find it easy going which keeps them happy and relaxed.
 // It is pertinent for real - time collaborative apps.
 //-----------------------------------------------------------------------------------------------------------------------
+// Q. What is difference between promises and async-await in Node.js?
+// 1. Promises
 
+// A promise is used to handle the asynchronous result of an operation.
+//JavaScript is designed to not wait for an asynchronous block of code to completely execute before other synchronous parts of the code can run.
+//With Promises, we can defer the execution of a code block until an async request is completed.
+//This way, other operations can keep running without interruption.
+
+// States of Promises:
+
+// Pending: Initial State, before the Promise succeeds or fails.
+// Resolved: Completed Promise
+// Rejected: Failed Promise, throw an error
+// Example:
+
+// function logFetch(url) {
+//   return fetch(url)
+//     .then(response => {
+//       console.log(response);
+//     })
+//     .catch(err => {
+//       console.error('fetch failed', err);
+//     });
+// }
+
+// 2. Async-Await
+
+// Await is basically syntactic sugar for Promises.
+//It makes asynchronous code look more like synchronous / procedural code, which is easier for humans to understand.
+// Putting the keyword async before a function tells the function to return a Promise.
+//If the code returns something that is not a Promise, then JavaScript automatically wraps it into a resolved promise with that value.
+//The await keyword simply makes JavaScript wait until that Promise settles and then returns its result.
+
+// Example:
+
+// async function logFetch(url) {
+//   try {
+//     const response = await fetch(url);
+//     console.log(response);
+//   }
+//   catch (err) {
+//     console.log('fetch failed', err);
+//   }
+// }
 //-----------------------------------------------------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------------------------
